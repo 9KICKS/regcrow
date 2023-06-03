@@ -1,6 +1,4 @@
-package africa.semicolon.regcrow.exception;
-
-import africa.semicolon.regcrow.exceptions.RegcrowException;
+package africa.semicolon.regcrow.exceptions;
 
 public class UserNotFoundException extends RegcrowException {
     public UserNotFoundException(String message) {
