@@ -18,19 +18,4 @@ public class BioData {
     private Long id;
     private String email;
     private String password;
-
-//    @Override
-//    public boolean equals(Object object) {
-//        if (object == null) return false;
-//        if (this.getClass() != object.getClass()) return false;
-//        BioData other = ((BioData) object);
-//        if (this.email != null && getEmail() == null) return false;
-//        assert this.email != null;
-//        return this.email.equals(other.getEmail());
-//    }
-//
-//    @Override
-//    public int hashcode() {
-//        return Objects.hash(this.email);
-//    }
 }
