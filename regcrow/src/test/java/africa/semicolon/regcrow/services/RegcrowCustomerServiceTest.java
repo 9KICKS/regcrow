@@ -67,7 +67,7 @@ public class RegcrowCustomerServiceTest {
         assertThat(numberOfCustomers).isGreaterThan(ZERO.intValue());
         customerService.deleteCustomer(customerRegistrationResponse.getId());
         List<CustomerResponse> currentCustomers = customerService.getAllCustomers(ONE.intValue(), TEN.intValue());
-        assertThat(currentCustomers.size()).isEqualTo(numberOfCustomers-ONE.intValue());
+        assertThat(currentCustomers.size()).isEqualTo(numberOfCustomers - ONE.intValue());
     }
 
     @Test public void updateCustomerTest() throws UserNotFoundException, ProfileUpdateFailedException {
