@@ -96,8 +96,8 @@ public class RegcrowCustomerService implements CustomerService {
         Customer customer = foundCustomer.orElseThrow(() -> new UserNotFoundException(String.format(USER_WITH_ID_NOT_FOUND, id)));
         JsonNode customerNode = mapper.convertValue(customer, JsonNode.class);
         try {
-            JsonNode updatedNode=jsonPatch.apply(customerNode);
-            Customer updatedCustomer =  mapper.convertValue(updatedNode, Customer.class);
+            JsonNode updatedNode = jsonPatch.apply(customerNode);
+            Customer updatedCustomer = mapper.convertValue(updatedNode, Customer.class);
             updatedCustomer.setLastModifiedDate(LocalDateTime.now());
             customerRepository.save(updatedCustomer);
             return ApiResponse.builder()
